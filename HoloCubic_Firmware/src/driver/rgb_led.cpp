@@ -12,6 +12,7 @@ Pixel &Pixel::setRGB(int r, int g, int b)
 {
     rgb_buffers[0] = CRGB(r, g, b);
     rgb_buffers[1] = CRGB(r, g, b);
+    rgb_buffers[2] = CRGB(r, g, b);
     FastLED.show();
 
     return *this;
@@ -21,6 +22,7 @@ Pixel &Pixel::setHVS(uint8_t ih, uint8_t is, uint8_t iv)
 {
     rgb_buffers[0].setHSV(ih, is, iv);
     rgb_buffers[1].setHSV(ih, is, iv);
+    rgb_buffers[2].setHSV(ih, is, iv);
     FastLED.show();
 
     return *this;

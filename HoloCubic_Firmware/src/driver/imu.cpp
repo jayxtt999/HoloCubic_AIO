@@ -1,5 +1,11 @@
 #include "imu.h"
 #include "common.h"
+#include <Arduino.h>
+#include "I2Cdev.h"
+#include "MPU6050.h"
+#define IMU_I2C_SDA 32
+#define IMU_I2C_SCL 33
+#include "Wire.h"
 
 const char *active_type_info[] = {"TURN_RIGHT", "RETURN",
                                   "TURN_LEFT", "UP",
@@ -13,6 +19,7 @@ IMU::IMU()
     action_info.long_time = true;
     this->order = 0; // 表示方位
 }
+
 
 void IMU::init(uint8_t order, uint8_t auto_calibration,
                SysMpuConfig *mpu_cfg)

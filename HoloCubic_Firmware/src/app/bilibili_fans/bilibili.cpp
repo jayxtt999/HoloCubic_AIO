@@ -36,7 +36,7 @@ static void read_config(B_Config *cfg)
     if (size == 0)
     {
         // 默认值
-        cfg->bili_uid = "344470052";  // B站的用户ID
+        cfg->bili_uid = "381832581";  // B站的用户ID
         cfg->updataInterval = 900000; // 更新的时间间隔900000(900s)
         write_config(cfg);
     }
